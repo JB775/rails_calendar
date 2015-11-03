@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CalendarRails</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+	<p><%= flash[:alert] %></p>
+	<p><%= flash[:notice] %></p>
+	<% if session[:user_id] %>
+	<div>
+		<%= link_to 'View Events I Created', 'myevents' %>
+		<%= link_to 'View All Public Events', 'events' %>
+		<%= link_to 'Logout', 'logout' %>
+	</div>
+
+	<% else %>
+		<div>
+			<%= link_to 'Login', 'login' %>
+		</div>
+	<% end %>
+<%= yield %>
+</body>
+</html>

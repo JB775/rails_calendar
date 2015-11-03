@@ -1,0 +1,12 @@
+<h1>Welcome!</h1>
+
+<h3>Events I Created:</h3>
+
+<% @events = Event.where(user_id:session[:user_id]) %>
+
+<% @events.each do |t| %>
+
+	<h4>test <%= t.title %> </h4>
+	<p> <%= t.description %> </p>
+
+<% end %>
