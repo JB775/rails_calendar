@@ -13,8 +13,9 @@
 	<p><%= flash[:notice] %></p>
 	<% if session[:user_id] %>
 	<div>
-		<%= link_to 'View Events I Created', 'myevents' %>
-		<%= link_to 'View All Public Events', 'events' %>
+		<%= link_to 'Create New Event!', new_event_path %>
+		<%= link_to 'View Events I Created', myevents_path %>
+		<%= link_to 'View All Public Events', events_path %>
 		<%= link_to 'Logout', 'logout' %>
 	</div>
 

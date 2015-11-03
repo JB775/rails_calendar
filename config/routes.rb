@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :events
 
-  get 'myevents', to: 'events#myevents', as: 'myevents_path'
+  get 'myevents', to: 'events#myevents', as: 'myevents'
 
   resources :users
   resources :sessions
